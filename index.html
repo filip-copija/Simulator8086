@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Filip Copija">
+    <title>8086 Simulaotr</title>
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body> 
+    <div id="main-frame">
+        <div id="header">
+            <p>Symulator procesora Intel 8086</p>
+        </div>
+        <div id="registers">
+            <div class="register" id="ax">
+                <h4>AX</h4> <input type="text" size="4" placeholder="0000" maxlength="4" id="axvalue"
+                    OnKeyDown="checkRegisterInput()">
+            </div>
+            <div class="register" id="bx">
+                <h4>BX</h4> <input type="text" size="4" placeholder="0000" maxlength="4" id="bxvalue"
+                    OnKeyDown="checkRegisterInput()">
+            </div>
+            <div class="register" id="cx">
+                <h4>CX</h4> <input type="text" size="4" placeholder="0000" maxlength="4" id="cxvalue"
+                    OnKeyDown="checkRegisterInput()">
+            </div>
+            <div class="register" id="dx">
+                <h4>DX</h4> <input type="text" size="4" placeholder="0000" maxlength="4" id="dxvalue"
+                    OnKeyDown="checkRegisterInput()">
+            </div>
+        </div>
+
+        <div id="commands">
+            <div>
+                <select name="command-select" id="command-select">
+                    <option value="MOV">MOV</option>
+                    <option value="XCHG">XCHG</option>
+
+                </select>
+                <select name="1st-register-select" id="1st-register-select">
+                    <option value="ax">AX</option>
+                    <option value="bx">BX</option>
+                    <option value="cx">CX</option>
+                    <option value="dx">DX</option>
+                </select>
+                <select name="2st-register-select" id="2st-register-select">
+                    <option value="ax">AX</option>
+                    <option value="bx">BX</option>
+                    <option value="cx">CX</option>
+                    <option value="dx">DX</option>
+                </select>
+            </div>
+
+            <button onclick="GetValues()">Execute</button>
+            <button onclick="Clear()">Clear</button>
+            <button onclick="Random()">Random</button>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="script.js"></script>
+
+</html>
